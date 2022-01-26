@@ -1,63 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <title>Frontend Mentor - Challenge - Time Tracking Dashboard</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="main-box">
-        <div class="report-box">
-          <img src="./images/image-jeremy.png" alt="" />
-          <div class="title">
-            <h1>Jeremy Robson</h1>
-            <p>Report for</p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+        <title>Frontend Mentor - Challenge - Time Tracking Dashboard</title>
+    </head>
+    <body>
+        <div class="center">
+          <div class="container">
+              <div class="main-box">
+                  <div class="report-box">
+                    
+                    <img src="./images/image-jeremy.png" alt="" />
+                    <div class="title">
+                          <h1>Jeremy Robson</h1>
+                          <p>Report for</p>
+                      </div>
+                  </div>
+                  <div class="links">
+                      <div class="btns">
+                          <button id="daily" class="btn active">Daily</button>
+                      </div>
+                      <div class="btns">
+                          <button id="weekly" class="btn">Weekly</button>
+                      </div>
+                      <div class="btns">
+                          <button id="monthly" class="btn">Monthly</button>
+                      </div>
+                  </div>
+              </div>
+              <!--end main-box-->
+  
+              <!-- secondary boxes -->
+              <div class="secondary-box work">
+                  <div class="stats-box">
+                      <div class="col">
+                          <div class="col-h2">
+                              <h2 class="stats-box-h2">Work</h2>
+                          </div>
+                          <div class="col-dots">
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                          </div>
+                      </div>
+                      <div class="col-2">
+                          <div class="stats-box-hours">
+                              <p class="stats-box-hours-p">32hrs</p>
+                          </div>
+                          <div class="stats-box-des">
+                              <p class="stats-box-des-p">Last Week - 36hrs</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="secondary-box play">
+                  <div class="stats-box">
+                      <div class="col">
+                          <div class="col-h2">
+                              <h2 class="stats-box-h2">Play</h2>
+                          </div>
+                          <div class="col-dots">
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                          </div>
+                      </div>
+                      <div class="col-2">
+                          <div class="stats-box-hours">
+                              <p class="stats-box-hours-p">10hrs</p>
+                          </div>
+                          <div class="stats-box-des">
+                              <p class="stats-box-des-p">Last Week - 8hrs</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="secondary-box study">
+                  <div class="stats-box">
+                      <div class="col">
+                          <div class="col-h2">
+                              <h2 class="stats-box-h2">Study</h2>
+                          </div>
+                          <div class="col-dots">
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                          </div>
+                      </div>
+                      <div class="col-2">
+                          <div class="stats-box-hours">
+                              <p class="stats-box-hours-p">4hrs</p>
+                          </div>
+                          <div class="stats-box-des">
+                              <p class="stats-box-des-p">Last Week - 7hrs</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="secondary-box exercise">
+                  <div class="stats-box">
+                      <div class="col">
+                          <div class="col-h2">
+                              <h2 class="stats-box-h2">Exercise</h2>
+                          </div>
+                          <div class="col-dots">
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                          </div>
+                      </div>
+                      <div class="col-2">
+                          <div class="stats-box-hours">
+                              <p class="stats-box-hours-p">4hrs</p>
+                          </div>
+                          <div class="stats-box-des">
+                              <p class="stats-box-des-p">Last Week - 5hrs</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="secondary-box social">
+                  <div class="stats-box">
+                      <div class="col">
+                          <div class="col-h2">
+                              <h2 class="stats-box-h2">Social</h2>
+                          </div>
+                          <div class="col-dots">
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                          </div>
+                      </div>
+                      <div class="col-2">
+                          <div class="stats-box-hours">
+                              <p class="stats-box-hours-p">5hrs</p>
+                          </div>
+                          <div class="stats-box-des">
+                              <p class="stats-box-des-p">Last Week - 10hrs</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="secondary-box self-care">
+                  <div class="stats-box">
+                      <div class="col">
+                          <div class="col-h2">
+                              <h2 class="stats-box-h2">Self care</h2>
+                          </div>
+                          <div class="col-dots">
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                          </div>
+                      </div>
+                      <div class="col-2">
+                          <div class="stats-box-hours">
+                              <p class="stats-box-hours-p">2hrs</p>
+                          </div>
+                          <div class="stats-box-des">
+                              <p class="stats-box-des-p">Last Week - 2hrs</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="links">
-          <div class="btns">
-            <button class="btn">Daily</button>
-          </div>
-          <div class="btns">
-            <button class="btn">Weekly</button>
-          </div>
-          <div class="btns">
-            <button class="btn">Monthly</button>
-          </div>
-        </div>
-      </div>
-      <!--end main-box-->
+      </body>
 
-      <!-- secondary box -->
-      <div class="secondary-box work">
-        <div class="stats-box">
-          <div class="col">
-            <div class="col-h2">
-              <h2 class="stats-box-h2">Work</h2>
-            </div>
-            <div class="col-dots">
-              <div class="dot"></div>
-              <div class="dot"></div>
-              <div class="dot"></div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="stats-box-hours">
-              <p class="stats-box-hours-p">32hrs</p>
-            </div>
-            <div class="stats-box-des">
-              <p class="stats-box-des-p">Last Week - 36hrs</p>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </body>
 </html>
