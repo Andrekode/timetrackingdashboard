@@ -1,102 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet"> 
-  <title>Time tracking dashboard - Frontend challenge</title>
-</head>
-<body>
-  <div class="container">
-    <div class="main-box">
-      <div class="report-box">        
-          <img src="./images/image-jeremy.png" alt="">        
-        <div class="title">
-          <h1>Jeremy Robson</h1>
-          <p>Report for</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor - Challenge - Time Tracking Dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-box">
+        <div class="report-box">
+          <img src="./images/image-jeremy.png" alt="" />
+          <div class="title">
+            <h1>Jeremy Robson</h1>
+            <p>Report for</p>
+          </div>
         </div>
-      </div>
         <div class="links">
           <div class="btns">
             <button class="btn">Daily</button>
           </div>
           <div class="btns">
             <button class="btn">Weekly</button>
-            
           </div>
           <div class="btns">
             <button class="btn">Monthly</button>
-
           </div>
+        </div>
       </div>
+      <!--end main-box-->
 
-    </div> <!--end main-box-->
-    <div class="secondary-box work">
-      <div class="stats">
-        <div class="splitter">
-          <div class="stats-title">
-            <h2>Work</h2>
-            <p class="stats-p-title">32hrs</p>
-  
-          </div>
-          <div class="stats-title-right">
-            <div class="dots">
+      <!-- secondary box -->
+      <div class="secondary-box work">
+        <div class="stats-box">
+          <div class="col">
+            <div class="col-h2">
+              <h2 class="stats-box-h2">Work</h2>
+            </div>
+            <div class="col-dots">
               <div class="dot"></div>
               <div class="dot"></div>
               <div class="dot"></div>
             </div>
-              <p class="stats-p-right">Last Week - 36hrs</p>
-
-        </div>
-
-          
-        </div>
-      </div>
-    </div>
-    <!--  -->
-    <div class="secondary-box play">
-      <div class="stats">
-        <div class="stats-title">
-          <h2>Play</h2>
-          <p>32hrs</p>
-
+          </div>
+          <div class="col-2">
+            <div class="stats-box-hours">
+              <p class="stats-box-hours-p">32hrs</p>
+            </div>
+            <div class="stats-box-des">
+              <p class="stats-box-des-p">Last Week - 36hrs</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <!--  -->
-    <div class="secondary-box study">
-      <div class="stats">
-        <div class="stats-title">
-          <h2>Study</h2>
-          <p>32hrs</p>
-
-        </div>
-      </div>
-    </div>
-    <!--  -->
-    <div class="secondary-box exercise">
-      <div class="stats">
-        <div class="stats-title">
-          <h2>Exercise</h2>
-          <p>32hrs</p>
-
-        </div>
-      </div>
-    </div>
-    <!--  -->
-    <div class="secondary-box social">
-      <div class="stats">
-        <div class="stats-title">
-          <h2>Self Care</h2>
-          <p>32hrs</p>
-
-        </div>
-      </div>
-    </div>
-    
-  </div>
-  
-</body>
+  </body>
 </html>
