@@ -84,11 +84,7 @@ img {
     display: flex;
     align-items: center;
 
-    border: solid red 2px;
     padding: 2em;
-}
-.image {
-    border: solid red 2px;
 }
 
 .title {
