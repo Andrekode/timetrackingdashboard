@@ -76,7 +76,7 @@ img {
     display: flex;
     flex-direction: column;
     /* max-width: 375px; */
-    width: 95%;
+    width: 80%;
     margin: 1em auto;
 }
 
@@ -215,8 +215,7 @@ img {
 .social,
 .self-care {
     background-repeat: no-repeat;
-    background-position-x: 95%;
-    background-position-y: top -10px;
+    background-position-x: 93%;
 }
 
 /*=====================
@@ -256,9 +255,11 @@ img {
     .container {
         margin: 0;
         display: grid;
-        grid-auto-columns: 1fr;
-        max-width: 800px;
+        grid-template-columns: 23% 23% 23% 23%;
+        max-width: 1200px;
+
         gap: 1.5em;
+
         grid-template-areas:
             'one two three four'
             'one six seven eight';
@@ -270,41 +271,62 @@ img {
         align-items: center;
         height: 100vh;
     }
+    .main-box {
+        /* height: 100%; */
+        padding-bottom: 0;
+    }
     .report-box {
-        height: 68%;
-        padding: 0.5em;
+        height: 64%;
+        flex-direction: column;
         align-items: flex-start;
+        justify-content: flex-start;
+        padding: 1em;
     }
     .links {
         flex-direction: column;
         align-items: flex-start;
 
-        padding: 1em;
+        padding: 2em 2em;
     }
     .btns {
         margin-bottom: 0.5em;
     }
     .secondary-box {
         margin: 0;
+        padding-top: 0.5em;
+    }
+    .stats-box {
+        /* padding-bottom: 5.3em; */
+
+        padding: 1em 2em 3em 2em;
     }
 
-    .report-box {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-    }
     .col-2 {
         flex-direction: column;
         align-items: flex-start;
+        margin-top: 1em;
+    }
+    .stats-box-hours p {
+        font-size: 4rem;
+    }
+    .stats-box-des {
+        margin-top: 0.3em;
+    }
+    .stats-box-des p {
+        font-size: 1rem;
     }
     img {
-        width: 40%;
+        width: 35%;
     }
     .title {
-        margin: 0.7em 0.5em;
+        margin-top: 1.5em;
+    }
+
+    .title h1 {
+        font-size: 2.5rem;
     }
     .title p {
-        font-size: 0.6rem;
+        font-size: 1rem;
     }
     img {
         margin: 1em 0.5em;
