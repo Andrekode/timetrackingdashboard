@@ -1,5 +1,10 @@
+/*=====================
+  =     variables     =
+  =====================*/
+
 :root {
     /* colors */
+
     --work: hsl(15, 100%, 70%);
     --play: hsl(195, 74%, 62%);
     --study: hsl(348, 100%, 68%);
@@ -12,6 +17,10 @@
     --pale-blue: hsl(236, 100%, 87%);
     --blue: hsl(246, 80%, 60%);
 }
+
+/*=====================
+  =       Main        =
+  =====================*/
 
 * {
     box-sizing: border-box;
@@ -26,7 +35,9 @@ body {
     background-color: var(--very-dark-blue);
 }
 
-/* Typograph */
+/*=====================
+=      Typograph      =
+  =====================*/
 
 h1 {
     margin: 0;
@@ -57,7 +68,9 @@ img {
     font-weight: 300;
 }
 
-/* layout main box */
+/*=====================
+  = layout main box =
+  =====================*/
 
 .container {
     display: flex;
@@ -119,13 +132,13 @@ img {
     color: #fff;
 }
 
-/* layout secondary box  */
+/*======================
+  = layout secondary box =
+  =====================*/
 
 .secondary-box {
     margin-top: 1em;
     border-radius: 15px;
-    /* max-width: 90%; */
-    /* width: 100%; */
 }
 
 .stats-box {
@@ -206,7 +219,9 @@ img {
     background-position-y: top -10px;
 }
 
-/* Grid */
+/*=====================
+  =    Grid area      =
+  =====================*/
 
 .main-box {
     grid-area: one;
@@ -232,6 +247,10 @@ img {
 .self-care {
     grid-area: eight;
 }
+
+/*=====================
+  =     Media         =
+  =====================*/
 
 @media (min-width: 1440px) {
     .container {
@@ -269,7 +288,6 @@ img {
         margin: 0;
     }
 
-   
     .report-box {
         flex-direction: column;
         align-items: flex-start;
@@ -283,7 +301,7 @@ img {
         width: 40%;
     }
     .title {
-        margin: .7em 0.5em;
+        margin: 0.7em 0.5em;
     }
     .title p {
         font-size: 0.6rem;
