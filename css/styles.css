@@ -120,14 +120,13 @@ img {
 
 .btn {
     font-size: 1rem;
-    border: 0;
-    background: 0;
     color: var(--desaturated-blue);
     transition: color 250ms;
 }
 
 .btn:hover,
-.btn:focus {
+.btn:focus,
+.active {
     cursor: pointer;
     color: #fff;
 }
@@ -215,7 +214,7 @@ img {
 .social,
 .self-care {
     background-repeat: no-repeat;
-    background-position-x: 93%;
+    background-position: 97% -9px;
 }
 
 /*=====================
@@ -255,28 +254,24 @@ img {
     .container {
         margin: 0;
         display: grid;
-        grid-template-columns: 23% 23% 23% 23%;
-        max-width: 1200px;
-
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 80%;
         gap: 1.5em;
-
         grid-template-areas:
             'one two three four'
             'one six seven eight';
     }
     .center {
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100vh;
     }
     .main-box {
-        /* height: 100%; */
         padding-bottom: 0;
     }
     .report-box {
-        height: 64%;
+        height: 70%;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
@@ -285,20 +280,18 @@ img {
     .links {
         flex-direction: column;
         align-items: flex-start;
-
-        padding: 2em 2em;
+        margin-top: 0.8em;
+        padding-left: 2em;
     }
     .btns {
-        margin-bottom: 0.5em;
+        margin-bottom: 1.2em;
     }
     .secondary-box {
         margin: 0;
         padding-top: 0.5em;
     }
     .stats-box {
-        /* padding-bottom: 5.3em; */
-
-        padding: 1em 2em 3em 2em;
+        padding-bottom: 1.5em;
     }
 
     .col-2 {
