@@ -22,6 +22,7 @@ fetch('./js/data.json')
                 renderData(element, timeframe)
             )
         })
+        console.log(data)
     })
 
 function buttonActive(event) {
