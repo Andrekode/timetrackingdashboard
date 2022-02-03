@@ -1,17 +1,21 @@
 
-let timeframe = 'weekly'
-let buttons = document.querySelectorAll('.btn')
+
+// variables
+const buttons = document.querySelectorAll('.btn')
 const container = document.querySelector('.container')
+let timeframe = 'weekly'
 let secBox;
 
 let edata = {}
 
 
-
+// eventlistener
 
 buttons.forEach((element) => {
     element.addEventListener('click', buttonActive)
 })
+
+
 // json data
 
 fetch('./js/data.json')
@@ -30,6 +34,9 @@ fetch('./js/data.json')
         secBox = document.querySelectorAll('.secondary-box')
         
     })
+
+
+// functions
 
 function buttonActive(event) {
     buttons.forEach((element) => {
