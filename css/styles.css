@@ -239,17 +239,15 @@ img {
 .study {
     grid-area: four;
 }
-.main-box {
-    grid-area: one;
-}
+
 .exercise {
-    grid-area: six;
+    grid-area: five;
 }
 .social {
-    grid-area: seven;
+    grid-area: six;
 }
 .self-care {
-    grid-area: eight;
+    grid-area: seven;
 }
 
 /*=====================
@@ -265,7 +263,7 @@ img {
         gap: 1.5em;
         grid-template-areas:
             'one two three four'
-            'one six seven eight';
+            'one five six seven';
     }
     .center {
         display: flex;
