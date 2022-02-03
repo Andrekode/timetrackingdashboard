@@ -186,31 +186,31 @@ img {
 
 .work {
     background: var(--work);
-    background-image: url(./images/icon-work.svg);
+    background-image: url(../images/icon-work.svg);
 }
 .play {
     background: var(--play);
-    background-image: url(./images/icon-play.svg);
+    background-image: url(../images/icon-play.svg);
 }
 
 .study {
     background: var(--study);
-    background-image: url(/images/icon-study.svg);
+    background-image: url(../images/icon-study.svg);
 }
 
 .exercise {
     background: var(--exercise);
-    background-image: url(./images/icon-exercise.svg);
+    background-image: url(../images/icon-exercise.svg);
 }
 
 .social {
     background: var(--social);
-    background-image: url(./images/icon-social.svg);
+    background-image: url(../images/icon-social.svg);
 }
 
 .self-care {
     background-color: var(--self-care);
-    background-image: url(./images/icon-self-care.svg);
+    background-image: url(../images/icon-self-care.svg);
 }
 
 .work,
