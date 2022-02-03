@@ -119,7 +119,7 @@ img {
 
 .btn {
     font-size: 1rem;
-    color: var(--desaturated-blue);
+    color: var(--pale-blue);
     transition: color 250ms;
 }
 
@@ -139,11 +139,18 @@ img {
     border-radius: 15px;
 }
 
+
 .stats-box {
     background: var(--dark-blue);
     padding: 1.5em;
     border-radius: 15px;
     margin-top: 2em;
+    transition: background 250ms;
+}
+
+.stats-box:hover {
+    background-color: var(--desaturated-blue);
+    cursor: pointer;
 }
 .stats-box-h2 {
     font-weight: 500;
@@ -255,7 +262,7 @@ img {
         margin: 0;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        max-width: 80%;
+        max-width: 70%;
         gap: 1.9em;
         grid-template-areas:
             'one two three four'

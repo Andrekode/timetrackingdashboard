@@ -1,16 +1,17 @@
-// add listeneres to to menu buttons
-// set buttons to active if clicked
+
 let timeframe = 'weekly'
 let buttons = document.querySelectorAll('.btn')
-
 const container = document.querySelector('.container')
+let secBox;
 
-let normalCards
+let edata = {}
+
+
+
 
 buttons.forEach((element) => {
     element.addEventListener('click', buttonActive)
 })
-
 // json data
 
 fetch('./js/data.json')
@@ -22,7 +23,12 @@ fetch('./js/data.json')
                 renderData(element, timeframe)
             )
         })
-        console.log(data)
+        data.forEach((element) => {
+            edata[element.title] = element.timeframes
+          
+        })
+        secBox = document.querySelectorAll('.secondary-box')
+        
     })
 
 function buttonActive(event) {
@@ -30,13 +36,43 @@ function buttonActive(event) {
         element.classList.remove('active')
     })
     event.target.classList.add('active')
-    timeframe = event.target.innerText.toLowerCase
+    timeframe = event.target.innerText.toLowerCase();
+    updateBoxes(timeframe)
+}
+
+function updateBoxes(timeframe) {
+    secBox.forEach((box) => {
+        updateBox(box, timeframe)
+    })
+}
+
+function updateBox(box, timeframe) {
+    const title = box.querySelector('.stats-box-h2').innerText
+    const current = edata[title][timeframe].current
+    const previous = edata[title][timeframe].previous
+    
+
+    const upDtxt = {
+        'daily': 'Yesterday',
+        'weekly': 'Last Week',
+        'monthly': 'Last Month'
+    }
+    const hoursEl = box.querySelector('.stats-box-hours-p')
+    hoursEl.innerText = `${current}hrs`
+    const msgEl = box.querySelector('.stats-box-des-p')
+    msgEl.innerText = `${upDtxt[timeframe]} - ${previous}hrs`
 }
 
 function renderData(element, timeframe) {
     let title = element.title
     let current = element.timeframes[timeframe].current
     let previous = element.timeframes[timeframe].previous
+
+    const upDtxt = {
+        daily: 'Yesterday',
+        weekly: 'Last Week',
+        monthly: 'Last Month'
+    }
 
     return `
 <div class="secondary-box ${title.toLowerCase().replace(' ', '-')}">
@@ -56,7 +92,7 @@ function renderData(element, timeframe) {
                 <p class="stats-box-hours-p">${current}hrs</p>
             </div>
             <div class="stats-box-des">
-                <p class="stats-box-des-p">Last Week - ${previous}hrs</p>
+                <p class="stats-box-des-p">${upDtxt[timeframe]} - ${previous}hrs</p>
             </div>
         </div>
     </div>
