@@ -139,7 +139,6 @@ img {
     border-radius: 15px;
 }
 
-
 .stats-box {
     background: var(--dark-blue);
     padding: 1.5em;
@@ -262,8 +261,8 @@ img {
         margin: 0;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        max-width: 70%;
-        gap: 1.9em;
+        max-width: 56.2em;
+        gap: 1.5em;
         grid-template-areas:
             'one two three four'
             'one six seven eight';
@@ -304,10 +303,10 @@ img {
     .col-2 {
         flex-direction: column;
         align-items: flex-start;
-        margin-top: 1em;
+        margin-top: 0.5em;
     }
     .stats-box-hours p {
-        font-size: 4rem;
+        font-size: 3rem;
     }
     .stats-box-des {
         margin-top: 0.3em;
@@ -319,7 +318,7 @@ img {
         width: 35%;
     }
     .title {
-        margin-top: 1.5em;
+        margin: 1em 0.5em;
     }
 
     .title h1 {
