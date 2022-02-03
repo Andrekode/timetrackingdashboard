@@ -1,6 +1,12 @@
 // variables
 const buttons = document.querySelectorAll('.btn');
 const container = document.querySelector('.container');
+const upDtxt = {
+    daily: 'Yesterday',
+    weekly: 'Last Week',
+    monthly: 'Last Month',
+};
+
 let timeframe = 'weekly';
 let secBox;
 
@@ -51,11 +57,6 @@ function updateBox(box, timeframe) {
     const current = edata[title][timeframe].current;
     const previous = edata[title][timeframe].previous;
 
-    const upDtxt = {
-        daily: 'Yesterday',
-        weekly: 'Last Week',
-        monthly: 'Last Month',
-    };
     const hoursEl = box.querySelector('.stats-box-hours-p');
     hoursEl.innerText = `${current}hrs`;
     const msgEl = box.querySelector('.stats-box-des-p');
@@ -66,12 +67,6 @@ function renderData(element, timeframe) {
     let title = element.title;
     let current = element.timeframes[timeframe].current;
     let previous = element.timeframes[timeframe].previous;
-
-    const upDtxt = {
-        daily: 'Yesterday',
-        weekly: 'Last Week',
-        monthly: 'Last Month',
-    };
 
     return `
 <div class="secondary-box ${title.toLowerCase().replace(' ', '-')}">
