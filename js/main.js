@@ -31,12 +31,12 @@ function createCard(task, time) {
     const statsBoxHoursDiv = document.createElement('div')
     statsBoxHoursDiv.classList.add('stats-box-hours')
     const statsBoxHoursP = document.createElement('p')
-    statsBoxHoursP.innerText = time[timeframe].current
+    statsBoxHoursP.innerText = `${time[timeframe].current}Hrs`
     const statsBoxDescriptionDiv = document.createElement('div')
     statsBoxDescriptionDiv.classList.add('stats-box-des')
     const statsBoxDescriptionP = document.createElement('p')
     statsBoxDescriptionP.classList.add('stats-box-des-p')
-    statsBoxDescriptionP.innerText = ` ${upDtxt[timeframe]} - ${time[timeframe].previous}`
+    statsBoxDescriptionP.innerText = ` ${upDtxt[timeframe]} - ${time[timeframe].previous}Hrs`
 
     colDiv.append(title)
     statsBoxDescriptionDiv.append(statsBoxDescriptionP)
