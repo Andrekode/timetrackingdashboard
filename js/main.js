@@ -1,5 +1,3 @@
-// variables
-
 const buttons = document.querySelectorAll('.btn')
 const container = document.querySelector('.container')
 
@@ -55,7 +53,6 @@ async function fetchAndRender() {
     const tasks = await getTasksByTime()
 
     for (const [task, time] of Object.entries(tasks)) {
-        console.log(task, time)
         container.append(createCard(task, time))
     }
 }
