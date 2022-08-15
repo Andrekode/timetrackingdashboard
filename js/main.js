@@ -1,6 +1,5 @@
 const buttons = document.querySelectorAll('.btn')
 const container = document.querySelector('.container')
-
 const upDtxt = {
     daily: 'Yesterday',
     weekly: 'Last Week',
@@ -15,10 +14,23 @@ buttons.forEach((element) => {
 
 fetchAndRender()
 
+function buttonActive(event) {
+    buttons.forEach((element) => {
+        element.classList.remove('active')
+    })
+    event.target.classList.add('active')
+    timeframe = event.target.innerText.toLowerCase()
+    document
+        .querySelectorAll('.secondary-box')
+        .forEach((element) => element.remove())
+
+    fetchAndRender()
+}
+
 function createCard(task, time) {
-    const bg = document.createElement('div')
-    bg.classList.add('secondary-box')
-    bg.classList.add(task.replace(' ', '-').toLowerCase())
+    const boxDiv = document.createElement('div')
+    boxDiv.classList.add('secondary-box')
+    boxDiv.classList.add(task.replace(' ', '-').toLowerCase())
     const statsBoxDiv = document.createElement('div')
     statsBoxDiv.classList.add('stats-box')
     const colDiv = document.createElement('div')
@@ -45,26 +57,9 @@ function createCard(task, time) {
     col2Div.append(statsBoxDescriptionDiv)
     statsBoxDiv.append(colDiv)
     statsBoxDiv.append(col2Div)
-    bg.append(statsBoxDiv)
-    return bg
-}
+    boxDiv.append(statsBoxDiv)
 
-async function fetchAndRender() {
-    const tasks = await getTasksByTime()
-
-    for (const [task, time] of Object.entries(tasks)) {
-        container.append(createCard(task, time))
-    }
-}
-
-async function getTasksByTime() {
-    const tasksByTime = {}
-    const tasks = await fetchTasks()
-    tasks.forEach((task) => {
-        tasksByTime[task.title] = task.timeframes
-    })
-
-    return tasksByTime
+    return boxDiv
 }
 
 async function fetchTasks() {
@@ -74,15 +69,20 @@ async function fetchTasks() {
     return tasks
 }
 
-function buttonActive(event) {
-    buttons.forEach((element) => {
-        element.classList.remove('active')
-    })
-    event.target.classList.add('active')
-    timeframe = event.target.innerText.toLowerCase()
-    document
-        .querySelectorAll('.secondary-box')
-        .forEach((element) => element.remove())
+async function fetchAndRender() {
+    const tasks = await fetchTasks()
+    const tasksByTime = getTasksByTime(tasks)
 
-    fetchAndRender()
+    for (const [task, time] of Object.entries(tasksByTime)) {
+        container.append(createCard(task, time))
+    }
+}
+
+function getTasksByTime(tasks) {
+    const tasksByTime = {}
+    tasks.forEach((task) => {
+        tasksByTime[task.title] = task.timeframes
+    })
+
+    return tasksByTime
 }
